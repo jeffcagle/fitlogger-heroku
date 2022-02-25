@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:8000/api/v1/';
+const baseUrl = 'https://fitlogger-dev.herokuapp.com/api/v1/';
 
 const headers = {
   'Content-Type': 'application/json',
