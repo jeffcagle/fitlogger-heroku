@@ -25,7 +25,7 @@ export default function ExerciseChart({ data: exercise }) {
       const graphColumnMid = graphColumn * 0.5;
 
       // Draw graph rectangle
-      ctx.strokeStyle = theme.isDark ? '#6b758a' : '#9ca3af';
+      ctx.strokeStyle = theme.style === 'dark' ? '#6b758a' : '#9ca3af';
       ctx.strokeRect(graphLeft, graphTop, graphWidth, graphHeight);
 
       // Assign row height
@@ -149,7 +149,10 @@ export default function ExerciseChart({ data: exercise }) {
       drawGraphData('#38bdf8', dataSets.sets);
       drawGraphData('#0369a1', dataSets.reps);
       drawGraphData('#f97316', dataSets.weight);
-      drawGraphData(theme.isDark ? '#b0b9cf' : '#374151', dataSets.rest);
+      drawGraphData(
+        theme.style === 'dark' ? '#b0b9cf' : '#374151',
+        dataSets.rest
+      );
     }
     handleResize();
     window.addEventListener('resize', handleResize);
@@ -192,7 +195,7 @@ export default function ExerciseChart({ data: exercise }) {
     theme
   ) {
     ctx.beginPath();
-    ctx.strokeStyle = theme.isDark ? '#414754' : '#e5e7eb';
+    ctx.strokeStyle = theme.style === 'dark' ? '#414754' : '#e5e7eb';
 
     for (let x = 1; x < heightAdjuster; x++) {
       ctx.moveTo(
@@ -216,7 +219,7 @@ export default function ExerciseChart({ data: exercise }) {
     theme
   ) {
     ctx.beginPath();
-    ctx.strokeStyle = theme.isDark ? '#414754' : '#e5e7eb';
+    ctx.strokeStyle = theme.style === 'dark' ? '#414754' : '#e5e7eb';
 
     for (let x = 1; x < 22; x += 2) {
       ctx.moveTo(graphLeft + (graphColumn / 2) * x, graphBottom);
@@ -225,7 +228,7 @@ export default function ExerciseChart({ data: exercise }) {
     ctx.stroke();
 
     ctx.beginPath();
-    ctx.strokeStyle = theme.isDark ? '#525969' : '#e5e7eb';
+    ctx.strokeStyle = theme.style === 'dark' ? '#525969' : '#e5e7eb';
 
     ctx.lineWidth = 4;
 
@@ -296,7 +299,7 @@ export default function ExerciseChart({ data: exercise }) {
     graphBottom,
     theme
   ) {
-    ctx.fillStyle = theme.isDark ? '#919db8' : '#6b7280';
+    ctx.fillStyle = theme.style === 'dark' ? '#919db8' : '#6b7280';
 
     for (let [index, month] of months.entries()) {
       ctx.fillText(
