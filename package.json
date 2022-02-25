@@ -1,0 +1,28 @@
+{
+  "name": "fit-server",
+  "version": "1.0.0",
+  "description": "Server for the fit app.",
+  "main": "server.js",
+  "type": "module",
+  "engines": {
+    "node": "14.19.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
+    "start-nm": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "Jeff Cagle",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.0"
+  }
+}
