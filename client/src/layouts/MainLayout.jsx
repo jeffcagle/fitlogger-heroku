@@ -1,16 +1,16 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import Footer from './ui/Footer';
 import Header from './ui/Header';
-import { AuthContext } from '../context/AuthContext';
+// import { AuthContext } from '../context/AuthContext';
 import { ThemeContext } from '../context/ThemeContext';
 
 export default function Layout({ children }) {
-  const auth = useContext(AuthContext);
+  // const auth = useContext(AuthContext);
   const theme = useContext(ThemeContext);
 
-  useEffect(() => {
-    console.log('MAIN LAYOUT, AUTH OBJ: ', auth);
-  }, [auth]);
+  // useEffect(() => {
+  //   console.log('MAIN LAYOUT, AUTH OBJ: ', auth);
+  // }, [auth]);
 
   return (
     <div className={`${theme.style}`}>
