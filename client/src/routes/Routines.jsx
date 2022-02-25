@@ -95,7 +95,7 @@ export default function Routines() {
             )}
 
             {routines.length === 0 && (
-              <p className="text-neutral-300 mb-8 font-bold">
+              <p className="text-gray-600 dark:text-neutral-300 mb-8 font-medium">
                 You have no routines.
               </p>
             )}
